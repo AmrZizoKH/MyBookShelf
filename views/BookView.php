@@ -1,6 +1,6 @@
 <?php
 require_once('../vendor/autoload.php');
-use \app\Warnings;
+use \App\Warnings;
 (new \App\Authenticate())->redirectIfNotAuth();
 $BookObj = new \App\Operations();
 $bookViewData = $BookObj->handleBookViewRequest();
