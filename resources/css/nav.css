@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5edde;
+}
+
+nav {
+    background: #f5ecd9;
+    border-bottom: 1px solid #d4c9b0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    line-height: 1;
+}
+
+.nav-name a {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #3d2b1f;
+    text-decoration: none;
+    border-bottom: none;
+    line-height: 1;
+}
+
+.nav-name a:hover {
+    color: #3d2b1f;
+    border-bottom: none;
+}
+
+.nav-name span {
+    font-size: 13px;
+    color: #8a7060;
+    display: block;
+    line-height: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: #5c4033;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    
+}
+
+.nav-links a:hover {
+    color: #3d2b1f;
+    border-bottom: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #3d2b1f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #8a7060;
+    margin-top: 1px;
+}
+
+.nav-links a[href="login.php"] {
+    border: 1px solid #3d2b1f;
+    padding: 6px 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.nav-links a[href="login.php"]::after,
+.nav-links a[href="SignUp.php"]::after,
+.nav-links a[href="logout.php"]::after {
+    display: none;
+}
+
+.nav-links a[href="login.php"]:hover {
+    background: #3d2b1f;
+    color: #f5f0e8;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a[href="SignUp.php"] {
+    background: #3d2b1f;
+    color: #f5f0e8;
+    border: 1px solid #3d2b1f;
+    padding: 6px 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.nav-links a[href="SignUp.php"]:hover {
+    background: #f5f0e8;
+    color: #3d2b1f;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a[href="logout.php"] {
+    background: #3d2b1f;
+    color: #f5f0e8;
+    border: 1px solid #3d2b1f;
+    padding: 6px 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.nav-links a[href="logout.php"]:hover {
+    background: #f5f0e8;
+    color: #3d2b1f;
+    transition: background 0.3s, color 0.3s;
+}

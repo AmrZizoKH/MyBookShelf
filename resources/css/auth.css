@@ -1,0 +1,638 @@
+/* ========== RUSTIC THEME CSS ========== */
+/* Warm, natural, vintage aesthetic */
+
+:root {
+    --rustic-brown: #5c3a21;
+    --rustic-dark-brown: #3e2716;
+    --rustic-light-brown: #8b6946;
+    --rustic-cream: #f5edde;
+    --rustic-warm-cream: #faf3e0;
+    --rustic-tan: #d4b896;
+    --rustic-dark-tan: #b8956e;
+    --rustic-green: #4a6741;
+    --rustic-olive: #6b7b3e;
+    --rustic-red: #8b3a3a;
+    --rustic-gray: #7a6e5d;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-rustic: 1px solid #c4a77a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+    background: var(--rustic-cream);
+    background-image: none;
+    color: var(--rustic-dark-brown);
+    line-height: 1.6;
+    padding-top: 0px;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: normal;
+    color: var(--rustic-brown);
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-left: 5px solid var(--rustic-red);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--rustic-tan);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--rustic-dark-brown);
+}
+
+.bookview-hero {
+    text-align: center;
+    margin: 48px auto 28px;
+}
+
+.bookview-title {
+    font-size: 52px;
+    font-style: italic;
+    font-weight: 500;
+    color: #3e2716;
+    letter-spacing: 0.5px;
+    margin: 0;
+    border-left: none;
+    padding-left: 0;
+}
+
+.bookview-subtitle {
+    margin-top: 6px;
+    font-size: 34px;
+    color: #8a7060;
+    line-height: 1.2;
+}
+
+.bookview-message-box {
+    margin-top: 20px;
+    max-width: 980px;
+}
+
+.bookview-update-box {
+    margin-top: 20px;
+}
+
+.bookview-update-container {
+    width: min(980px, 94vw);
+    margin: 20px auto 0;
+}
+
+.bookview-update-title {
+    font-style: italic;
+}
+
+.bookview-update-actions {
+    margin-top: 20px;
+}
+
+.bookview-table {
+    width: min(1200px, 94vw);
+    margin: 1rem auto;
+}
+
+@media (max-width: 768px) {
+    .bookview-update-container {
+        width: 96vw;
+    }
+
+    .bookview-table {
+        width: 96vw;
+    }
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+a {
+    color: var(--rustic-brown);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px dotted transparent;
+}
+
+a:hover {
+    color: var(--rustic-red);
+    border-bottom-color: var(--rustic-red);
+}
+
+/* ========== BUTTONS ========== */
+button, .btn, input[type="submit"] {
+    background: var(--rustic-brown);
+    color: var(--rustic-cream);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid var(--rustic-dark-brown);
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+    background: var(--rustic-dark-brown);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ========== FORMS ========== */
+form {
+    background: var(--rustic-warm-cream);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: var(--border-rustic);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--rustic-brown);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: var(--border-rustic);
+    border-radius: 4px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--rustic-green);
+    box-shadow: 0 0 0 3px rgba(74, 103, 65, 0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ========== TABLES ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--rustic-warm-cream);
+    box-shadow: var(--shadow);
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+table tr th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr th:last-child {
+    border-top-right-radius: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: var(--border-rustic);
+    
+}
+
+.action-buttons {
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.action-buttons a {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.action-buttons a:last-child {
+    margin-right: 0;
+}
+
+.book-note-row td {
+    text-align: left !important;
+    background: #f7efdf;
+}
+
+.book-note-cell {
+    padding: 14px 16px;
+}
+
+.book-note-inline-layout {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.book-note-inline-left {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.book-note-inline-book {
+    color: var(--rustic-brown);
+    margin-bottom: 6px;
+}
+
+.book-note-inline-note {
+    line-height: 1.6;
+    color: #3f2a1a;
+}
+
+.book-note-inline-right {
+    min-width: 88px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-note-inline-close {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+    .book-note-inline-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .book-note-inline-right {
+        justify-content: flex-end;
+    }
+}
+
+th {
+    background: var(--rustic-brown);
+    color: var(--rustic-cream);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background: rgba(180, 150, 110, 0.1);
+}
+
+/* ========== CARDS ========== */
+.card {
+    background: var(--rustic-warm-cream);
+    border: var(--border-rustic);
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    margin: 2rem auto;
+    width: min(92vw, 1180px);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .page-title {
+    display: block;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--rustic-brown);
+    margin-bottom: 1.5rem;
+}
+
+.card .brand,
+.card .brand-sub {
+    text-align: center;
+}
+
+.card .brand {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    color: var(--rustic-brown);
+    margin-bottom: 0.25rem;
+}
+
+.card .brand-sub {
+    font-size: 0.95rem;
+    color: var(--rustic-gray);
+    margin-bottom: 1.5rem;
+}
+
+.card form {
+    width: 100%;
+    max-width: none;
+}
+
+.auth-page {
+    min-height: 100vh;
+}
+
+.auth-page .auth-card {
+    width: min(92vw, 430px);
+    min-height: 560px;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-page .auth-card form {
+    padding: 1.4rem;
+}
+
+.home_PB {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 40px 24px 24px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.home_PB h1 {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-style: italic;
+    border-left: 0 !important;
+    padding-left: 0;
+    margin-bottom: 0.35em;
+}
+
+.home_PB p {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    color: var(--rustic-light-brown);
+    margin-bottom: 0;
+}
+
+.home-page-wrap {
+    width: min(1200px, 94vw);
+    margin: 0 auto 48px;
+}
+
+.home-books-section {
+    margin-top: 24px;
+}
+
+.home-books-title {
+    border-left: none;
+    border-bottom: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+    font-size: 1.9rem;
+}
+
+.home-cards-wrapper {
+    background: linear-gradient(180deg, #f8f1e2 0%, #f4e9d2 100%);
+    border: 1px solid #d8c19c;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.home-books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.home-book-card {
+    background: #fffaf1;
+    border: 1px solid #d9c3a1;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(92, 58, 33, 0.12);
+    padding: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-book-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 18px 34px rgba(92, 58, 33, 0.24);
+}
+
+.home-book-heading {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: var(--rustic-dark-brown);
+    border-bottom: 1px solid #dbc4a1;
+    padding-bottom: 8px;
+}
+
+.home-book-heading span {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.95rem;
+    color: var(--rustic-gray);
+}
+
+.home-book-cover-wrap {
+    margin: 8px 0 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-book-cover {
+    width: 100%;
+    max-width: 210px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #c4a77a;
+}
+
+.home-book-cover-placeholder {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #8a7060;
+    background: #efe2cc;
+}
+
+.home-book-note {
+    margin: 0;
+    line-height: 1.55;
+    color: #3f2a1a;
+}
+
+.home-no-books {
+    margin-top: 8px;
+    color: var(--rustic-gray);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+    .home-books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .home-books-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.field {
+    margin-bottom: 1.25rem;
+}
+
+.field label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.9rem;
+}
+
+.field-upload .upload-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px dashed var(--rustic-dark-tan);
+    border-radius: 8px;
+    background: #fff9ef;
+    color: var(--rustic-dark-brown);
+    cursor: pointer;
+}
+
+.field-upload .upload-input:hover {
+    border-color: var(--rustic-brown);
+    background: #fff5e5;
+}
+
+.field-upload .upload-input::file-selector-button {
+    background: var(--rustic-brown);
+    color: var(--rustic-cream);
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-right: 12px;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.field-upload .upload-input::file-selector-button:hover {
+    background: var(--rustic-dark-brown);
+}
+
+.field-upload .upload-input::-webkit-file-upload-button {
+    background: var(--rustic-brown);
+    color: var(--rustic-cream);
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-right: 12px;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+}
+
+.btn-submit {
+    display: block;
+    margin: 1rem auto 0;
+    font-family: 'Georgia', serif;
+    width: fit-content;
+}
+
+/* ========== ALERTS / MESSAGES ========== */
+.alert {
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: 'Georgia', serif;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #e6f3e6;
+    color: var(--rustic-green);
+    border-left-color: var(--rustic-green);
+}
+
+.alert-danger {
+    background: #f3e6e6;
+    color: var(--rustic-red);
+    border-left-color: var(--rustic-red);
+}
+
+.alert-warning {
+    background: #fcf3e0;
+    color: var(--rustic-brown);
+    border-left-color: var(--rustic-tan);
+}
+
+/* ========== UTILITY CLASSES ========== */
+.text-center { text-align: center; }
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+
+    .auth-page .auth-card {
+        width: min(94vw, 430px);
+        min-height: 0;
+        margin: 1.5rem auto;
+        padding: 1.25rem;
+    }
+    
+    form {
+        padding: 1rem;
+    }
+    
+    table, th, td {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+}
